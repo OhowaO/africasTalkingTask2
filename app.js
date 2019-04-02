@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 app.post('/', function(req, res){
   //console.log(req);
   console.log('Callback noted');
-  //console.log('[BODY]' + req);
+  console.log('[BODY]' + req);
   res.send('CON menu is here');
 })
 
