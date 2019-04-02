@@ -4,7 +4,8 @@
   "description": "a simple app for registering users on AT sandbox",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/AfricasTalkingTalent/TechnicalChallengeJune2019#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines":{
+    "node":"10.x"
   }
 }
