@@ -7,8 +7,9 @@ app.get('/', function(req, res){
 })
 
 app.post('/', function(req, res){
-  console.log(req);
-  res.send('CON menu is here')
+  //console.log(req);
+  console.log('Callback noted');
+  res.send('CON menu is here');
 })
 
 app.listen(port, function(){
