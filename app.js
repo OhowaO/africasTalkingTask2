@@ -7,8 +7,7 @@ app.get('/', function(req, res){
 })
 
 app.post('/', function(req, res){
-  const data = req.params;
-  console.log(data);
+  console.log(req);
 })
 
 app.listen(port, function(){
