@@ -1,0 +1,22 @@
+{
+  "name": "at2",
+  "version": "1.0.0",
+  "description": "a simple app for registering users on AT sandbox",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfricasTalkingTalent/TechnicalChallengeJune2019.git"
+  },
+  "author": "ohowao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfricasTalkingTalent/TechnicalChallengeJune2019/issues"
+  },
+  "homepage": "https://github.com/AfricasTalkingTalent/TechnicalChallengeJune2019#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
