@@ -7,10 +7,19 @@ app.get('/', function(req, res){
 })
 
 app.post('/', function(req, res){
-  //console.log(req);
-  console.log('Callback noted');
-  console.log(req);
-  res.send('CON menu is here');
+  const { sessionId, serviceCode, phoneNumber, text } = req.body;
+
+  let response = '';
+
+  if (text == ''){
+    response = `CON Welcome to a simple registration app
+    What is your Name?`
+  } else {
+    response = `thank you for regiserstering, your name is ${text}`
+
+    // add phone number to mongoose schema.
+    
+  }
 })
 
 app.listen(port, function(){
