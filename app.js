@@ -16,14 +16,14 @@ app.post('/', function(req, res){
       response = `CON Welcome to a simple registration app
       What is your Name?`;
     } else {
-      response = `thank you for regiserstering, your name is ${text}`;
+      response = `END thank you for regiserstering, your name is ${text}`;
     }
 
     res.send(response);
 
       // add phone number to mongoose schema.
   } else {
-    res.send("required parameters not provided");
+    res.send("CON required parameters not provided");
   }
 })
 
