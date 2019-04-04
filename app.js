@@ -25,9 +25,6 @@ app.post('/', function(req, res){
   } else {
     res.send("required parameters not provided");
   }
-
-
-  }
 })
 
 app.listen(port, function(){
