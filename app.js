@@ -7,18 +7,26 @@ app.get('/', function(req, res){
 })
 
 app.post('/', function(req, res){
-  const { sessionId, serviceCode, phoneNumber, text } = req.body;
+  if (req.body){
+    const { sessionId, serviceCode, phoneNumber, text } = req.body;
 
-  let response = '';
+    let response = '';
 
-  if (text == ''){
-    response = `CON Welcome to a simple registration app
-    What is your Name?`
+    if (text == ''){
+      response = `CON Welcome to a simple registration app
+      What is your Name?`;
+    } else {
+      response = `thank you for regiserstering, your name is ${text}`;
+    }
+
+    res.send(response);
+
+      // add phone number to mongoose schema.
   } else {
-    response = `thank you for regiserstering, your name is ${text}`
+    res.send("required parameters not provided");
+  }
 
-    // add phone number to mongoose schema.
-    
+
   }
 })
 
