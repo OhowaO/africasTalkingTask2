@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.get('/', function(req, res){
-  res.send("hello world");
+  res.send("Africa's Talking Technical Interview, see github README.md for more info");
 })
 
 app.post('/', function(req, res){
