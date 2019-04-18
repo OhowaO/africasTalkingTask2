@@ -40,14 +40,7 @@ User journey: person dials the USSD Code and gets prompted for a username and em
 ## Tips
 ###### Include run and dependency instructions in your README.md file or push a runnable file
 ###### Comment your code to show your thought process
-###### Make sure your project is runnable for this task
-
-# Working on the Code Challenge
-1.Fork the code challenge repository provided.
-
-2.Make a topic branch. In your github form, keep the master branch clean. When you create a branch, it essentially will be a copy of the master.
-
->Pull all changes, make sure your repository is up to date
+###### Make sure your project is runnable for this task     
 
 
 ## Solution
