@@ -31,7 +31,7 @@ app.post('/', function(req, res){
               connectdb(()=>{
                 let obj1 = {}
                 obj1[serviceCode] = survey[serviceCode];
-                obj1[serviceCode]['answers'][num] = text;
+                obj1[serviceCode]['answers'][num] = text.split("*")[(text.split("*")).length-1];
                 obj1[serviceCode]['current'] = (num+1);
                 //save answer to db
                 db.collection(env.db.userColl).updateOne({phoneNumber:phoneNum},
