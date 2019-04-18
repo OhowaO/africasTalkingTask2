@@ -15,16 +15,20 @@ const variables = {
     "*384*234232#" :{
       'current':0,
       'quiz':{
-        0:"CON Welcome to a simple registration app. What is your full name?",
-        1:"CON How old are you?",
-        2:"CON Where do you stay?",
-        3:"END Thank you for registering."
+        0:"CON Welcome to a simple registration app. What is your phoneNumber?"
+        1:"What is your full name?",
+        2:"What is your email?"
+        3:"CON How old are you?",
+        4:"CON Where do you stay?",
+        5:"END Thank you for registering."
       },
       'answers':{
         0:null,
         1:null,
         2:null,
-        3:null
+        3:null,
+        4:null,
+        5:null
       }
     },
     "*384*4232#" :{
