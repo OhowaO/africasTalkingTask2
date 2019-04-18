@@ -15,7 +15,7 @@ const variables = {
     "*384*234232#" :{
       'current':0,
       'quiz':{
-        0:"CON Welcome to a simple registration app. What is your phoneNumber?"
+        0:"CON Welcome to a simple registration app. What is your phoneNumber?",
         1:"What is your full name?",
         2:"What is your email?"
         3:"CON How old are you?",
