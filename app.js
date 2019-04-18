@@ -18,7 +18,6 @@ app.get('/', function(req, res){
 
 app.post('/', function(req, res){
   // start creating response
-  let response = '';
   //check if there exists a body
   if (req.body){
     //save parameters
