@@ -7,6 +7,7 @@ const app = express();
 const port = env.port;
 const dbName = env.db.dbName;
 const mongoDBUrl = env.db.mongoDBUrl;
+const survey = env.survey;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -26,11 +27,10 @@ app.post('/', function(req, res){
     connectdb(()=>{
       db.collection(env.db.userColl).findOne({phoneNumber:phoneNum}, (err, result)=>{
         if (err == null && result != null ){
-          //console.log(`User ${phoneNumber} has already been registered with us`);
           if (result[serviceCode]){
+            let num = result[serviceCode]['current'];
             if (text){
               connectdb(()=>{
-                let num = result[serviceCode]['current'];
                 let obj1 = {}
                 obj1[serviceCode] = survey[serviceCode];
                 obj1[serviceCode]['answers'][num] = text;
@@ -41,7 +41,7 @@ app.post('/', function(req, res){
                   if (err){
                     console.log(err);
                   }else{
-                    console.log('Successfully added answer');
+                    console.log('Successfully added answer to database and incremented count');
                   }
                   response = result[serviceCode]['quiz'][(num+1)];
                   //send response
@@ -50,7 +50,7 @@ app.post('/', function(req, res){
               })
 
             }else{
-              response = result[serviceCode]['quiz'][result[serviceCode]['current']] + " This question is mandatory for you to proceed";
+              response = result[serviceCode]['quiz'][num] + " This question is mandatory for you to proceed";
               //send response
               res.send(response);
             }
@@ -61,7 +61,7 @@ app.post('/', function(req, res){
                 if (err){
                   console.log(err);
                 }else{
-                  console.log('Successfully creating new survey for user');
+                  console.log('Successfully initialized new survey for user');
                   response = survey[serviceCode]['quiz'][survey[serviceCode]['current']];
                   //send response
                   res.send(response);
@@ -70,7 +70,7 @@ app.post('/', function(req, res){
             })
           }
         }else{
-          console.log('Error finding given user \n' + err);
+          console.log('[Error]'+  err + '\nInitializing new user to database');
           //start registering new user
           connectdb(()=>{
             let dataset = {phoneNumber:phoneNum, [serviceCode]:survey[serviceCode]};
@@ -79,7 +79,6 @@ app.post('/', function(req, res){
               if (err){
                 console.log('Trouble adding new user' + err);
               }
-              console.log("[DATASET]" + typeof(dataset[serviceCode]['quiz'][dataset[serviceCode]['current']]));
               response = dataset[serviceCode]['quiz'][dataset[serviceCode]['current']];
               //send response
               res.send(response)
@@ -116,38 +115,4 @@ function connectdb(callback){
       client.close();
     }
   })
-}
-
-//Questions json
-const survey = {
-  "234232" :{
-    'current':0,
-    'quiz':{
-      0:"CON Welcome to a simple registration app. What is your full name?",
-      1:"CON How old are you?",
-      2:"CON Where do you stay?",
-      3:"END Thank you for registering."
-    },
-    'answers':{
-      0:null,
-      1:null,
-      2:null,
-      3:null
-    }
-  },
-  "4232" :{
-    'current':0,
-    'quiz':{
-      0:"CON I would love to know more about you. Where do you study?",
-      1:"CON What's your favorite color?",
-      2:"CON What is your favorite drink?",
-      3:"END Thank you."
-    },
-    'answers':{
-      0:null,
-      1:null,
-      2:null,
-      3:null
-    }
-  }
 }
