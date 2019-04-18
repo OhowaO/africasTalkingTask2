@@ -12,7 +12,7 @@ const variables = {
     "userColl":"userRegistration"
   },
   "survey":{
-    "234232" :{
+    "*384*234232#" :{
       'current':0,
       'quiz':{
         0:"CON Welcome to a simple registration app. What is your full name?",
@@ -27,7 +27,7 @@ const variables = {
         3:null
       }
     },
-    "4232" :{
+    "*384*4232#" :{
       'current':0,
       'quiz':{
         0:"CON I would love to know more about you. Where do you study?",
