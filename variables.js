@@ -16,8 +16,8 @@ const variables = {
       'current':0,
       'quiz':{
         0:"CON Welcome to a simple registration app. What is your phoneNumber?",
-        1:"What is your full name?",
-        2:"What is your email?"
+        1:"CON What is your full name?",
+        2:"CON What is your email?",
         3:"CON How old are you?",
         4:"CON Where do you stay?",
         5:"END Thank you for registering."
