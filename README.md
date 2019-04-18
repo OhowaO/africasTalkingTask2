@@ -1,6 +1,6 @@
 # Code Challenge for the June 2019 Cohort
 
-Here's the challenge for anyone hoping to join the June to August Technical Internship Cohort at Africa's Talking. 
+Here's the challenge for anyone hoping to join the June to August Technical Internship Cohort at Africa's Talking.
 
 ## This challenge is due at 0900hrs EAT on 29th March 2019
 
@@ -22,17 +22,6 @@ You can participate on as many challenges as you wish:
 
 ## Code Challenge Bounty:
   - A chance to work with some of the most brilliant minds in the world!
-  
-## Task 1
-##### Those structures though...
-##### Play around with these structures, make sure the logic and the approach are tight.
-
-With the assumption that you are using an object oriented programming language, write a program that given hundreds of documents, can find all documents with words containing the letter "a" in them.
-
-## Tips
-###### Map then reduce
-###### Comment your code to show your thought process
-###### You can submit this as a file in your pull request named "task 1"
 
 
 ## Task 2
@@ -43,7 +32,7 @@ Create a simple USSD + SMS app that does user registration.
 
 User journey: person dials the USSD Code and gets prompted for a username and email address. After which they get an SMS response telling them they've registered successfully
 
-## Resources: 
+## Resources:
 - AT SDKs: https://github.com/AfricasTalkingLtd
 - Sandbox + Simulator: Which you access when you open your AT account
 - AT docs: http://docs.africastalking.com/
@@ -60,50 +49,18 @@ User journey: person dials the USSD Code and gets prompted for a username and em
 
 >Pull all changes, make sure your repository is up to date
 
-```sh
-$ cd June_2019_Challenge
-$ git pull origin master
-```
 
->Create a new branch as follows-> git checkout -b [your name], e.g.
+## Solution
 
-```sh
-$ git checkout -b roina_ochieng master
-```
+## Set up instructions
 
->See all branches created
+1. Ensure you have installed on your machine the required version of node
 
-```sh
-$ git branch
-* roina_ochieng
-  master
-```
+2. Clone the repo to your machine and cd into the folder.
 
->Push the new branch to github
+3. Run 'npm start'. The pakage.json file contains a list of dependencies needed for the file and npm start will install all the required dependencies.
 
-```sh
-$ git push origin -u roina_ochieng
-```
-
-3.Make changes to the fork following the Code Challenge provided.
-
-4.Commit the changes to your fork.
-
-5.Make a pull request to the January_2019_UiUx_Challenge Repo.
-
-## Get Support from Africa's Talking
-In case you have any questions, reach out [the team](mailto:talent@africastalking.com) or the #internship_challenge Slack channel
-
-## Submissions later than 0900hrs EAT on 29th March 2019 will not be considered
+4. To add your own survey, add the survey to the survey variable in the variables.js file.
 
 
-
-
-
-
-
-
-
-
-
-
+### There is a version of this app that is hosted live on heroku. Simply go to the Africa's talking simulator and dial the respective survey USSD channels.
